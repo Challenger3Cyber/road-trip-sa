@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Road Trip Challenge - San Antonio Edition</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    // ---------- San Antonio Landmarks ----------
+    const CITIES = [
+      { id: 'A', name: 'Downtown SA', x: 300, y: 280, gas: true },
+      { id: 'B', name: 'Alamo Heights', x: 400, y: 200, gas: true },
+      { id: 'C', name: 'Stone Oak', x: 520, y: 140, gas: true },
+      { id: 'D', name: 'Medical Center', x: 220, y: 200, gas: true },
+      { id: 'E', name: 'Lackland AFB', x: 120, y: 320, gas: true },
+      { id: 'F', name: 'UTSA Campus', x: 200, y: 120, gas: true },
+      { id: 'G', name: 'Southside SA', x: 320, y: 420, gas: true },
+    ];
+
+    const ROADS = [
+      ['A','B',8], ['B','C',12], ['C','F',10], ['F','D',9],
+      ['A','D',7], ['D','E',15], ['E','A',10], ['D','G',12],
+      ['A','G',14], ['B','F',11], ['G','E',9]
+    ];
+
+    function App(){
+      const [miles, setMiles] = useState(0);
+      const [fuel, setFuel] = useState(150);
+      const [time, setTime] = useState(0);
+      const events = [
+        "Flat tire! Lose a turn.",
+        "Traffic jam on Loop 410. +20 min.",
+        "Thunderstorm on I-10. Speed reduced.",
+        "Shortcut through a side street! -5 miles.",
+        "Detour due to Fiesta parade. +10 miles.",
+        "Speeding ticket on I-35. +15 min."
+      ];
+
+      const drive = () => {
+        setMiles(m => m + 5);
+        setFuel(f => f - 5);
+        setTime(t => t + 10);
+      };
+
+      const drawEvent = () => {
+        alert(events[Math.floor(Math.random() * events.length)]);
+      };
+
+      return (
+        <div className="p-6 text-center">
+          <h1 className="text-xl font-bold">🚗 Road Trip Challenge: San Antonio</h1>
+          <p>Miles: {miles} | Fuel: {fuel} | Time: {time} min</p>
+          <button onClick={drive} className="m-2 p-2 bg-blue-500 text-white rounded">Drive</button>
+          <button onClick={drawEvent} className="m-2 p-2 bg-green-500 text-white rounded">Draw Event</button>
+          <button onClick={() => setFuel(150)} className="m-2 p-2 bg-yellow-500 text-black rounded">Refuel</button>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>
