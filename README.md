@@ -1,1 +1,26 @@
-https://apis.mail.aol.com/ws/v3/mailboxes/@.id==VjN-BV3pd9KZwUD8jYdcTjEyrQkNnVoQfKE9YE4bzmw19U3dqenG8UTFYLSuzxqLnu4gGl2LEeEb8L4Fd0GBJs5fOA/messages/@.id==ABZqVuL9X9pOdc-v-QzhJ07KcdA/content/parts/@.id==2/refresh?appid=AolMailNorrin&ymreqid=d41d8cd9-8f00-b204-1c34-970001019400
+[README.md](https://github.com/user-attachments/files/22183319/README.md)[Uploading # Road Trip Challenge — San Antonio
+
+This is a fun interactive game for students to practice driving/map skills in San Antonio, TX.
+
+## Features
+
+- Pick your destination from various San Antonio locations
+- Visual map with city dots and connecting roads
+- Animated car moves along roads (speed proportional to distance)
+- Events like traffic jams, detours, and special location effects
+- Fuel gauge mechanic (refuel only at gas-enabled cities)
+- “🎉 You have arrived alive!” win message
+- Track miles and time
+
+## How to Play
+
+1. Click a destination to start the game.
+2. Travel along the roads to reach your destination.
+3. Manage your fuel and react to random events.
+4. Refuel at gas stations if needed.
+5. Arrive alive at your destination to win!
+
+## GitHub Pages
+
+The game can be hosted directly using GitHub Pages. Simply upload this folder to a GitHub repository, enable Pages in the repository settings, and open the URL provided by GitHub.
+README.md…]()
