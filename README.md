@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/22183319/README.md)[Uploading # Road Trip Challenge — San Antonio
+ Road Trip Challenge — San Antonio
 
 This is a fun interactive game for students to practice driving/map skills in San Antonio, TX.
 
@@ -23,4 +23,4 @@ This is a fun interactive game for students to practice driving/map skills in Sa
 ## GitHub Pages
 
 The game can be hosted directly using GitHub Pages. Simply upload this folder to a GitHub repository, enable Pages in the repository settings, and open the URL provided by GitHub.
-README.md…]()
+
